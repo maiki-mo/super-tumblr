@@ -23,11 +23,17 @@ post "/log_in" do
   if @user && @user.password == params[:password]
     # this line signs a user in
     session[:user_id] = @user.id
+
+    redirect "/sign-in"
   else
     # if user does not exist or password does not match then
     #   redirect the user to the sign in page
-    redirect "/log_in"
+    redirect "/"
   end
+end
+
+get "/sign-in" do
+  erb :user_page
 end
 
 get "/log_out" do
@@ -47,12 +53,12 @@ post "/sign_up" do
     first_name: params[:first_name],
     last_name: params[:last_name],
     birthday: params[:birthday],
-    email: params[:email],
+    email: params[:email]
   )
 
   # this line does the signing in
   session[:user_id] = @user.id
 
   # assuming this page exists
-  redirect "/signed_in_page"
+  redirect "/"
 end

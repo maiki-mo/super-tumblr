@@ -1,8 +1,8 @@
 body {
+  height: 50vw;
   margin: 0;
   border: 0;
   padding: 0;
-  height: 40vw;
   overflow-x: hidden;
   background-color: #221818; }
 
@@ -90,7 +90,7 @@ header {
 
 footer {
   margin: 2vw 1vw 0 1vw;
-  height: 4vw;
+  height: 6vw;
   background-color: #C6C8CD;
   overflow: hidden;
   position: relative;
@@ -105,10 +105,11 @@ main {
   margin: 0 3vw 0 3vw;
   overflow: hidden;
   position: relative;
-  bottom: 11vw; }
+  bottom: 11vw;
+  height: 30vw; }
 
 #main-info {
-  height: 110%;
+  height: 30vw;
   background-color: #465875;
   margin: 5vw 0vw -1vw 5vw; }
 
@@ -123,12 +124,16 @@ main {
   text-decoration: none;
   font-size: 1.8vw;
   padding-bottom: 0.2vw;
+  padding-right: 0.6vw;
   text-transform: uppercase;
-  margin-left: 1vw; }
+  margin-left: 1vw;
+  border-bottom: 1px #67768F solid;
+  border-right: 1px #67768F solid; }
 
 .sign-in-sign-out:hover {
-  color: #1D304D;
-  border-bottom: 1px #1D304D solid; }
+  color: white;
+  border-bottom: 1px white solid;
+  border-right: 1px white solid; }
 
 .content {
   position: relative;

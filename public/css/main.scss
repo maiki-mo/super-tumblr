@@ -6,10 +6,10 @@ $lightesttone: #C6C8CD;
 
 
 body {
+  height: 50vw;
   margin: 0;
   border: 0;
   padding: 0;
-  height: 40vw;
   overflow-x: hidden;
   background-color: #221818;
 }
@@ -108,7 +108,7 @@ header {
 
 footer {
   margin: 2vw 1vw 0 1vw;
-  height: 4vw;
+  height: 6vw;
   background-color: $lightesttone;
   overflow: hidden;
   position: relative;
@@ -126,10 +126,11 @@ main {
   overflow: hidden;
   position: relative;
   bottom: 11vw;
+  height: 30vw;
 }
 
 #main-info {
-  height: 110%;
+  height: 30vw;
   background-color: $midtone;
   margin: 5vw 0vw -1vw 5vw;
 }
@@ -146,13 +147,18 @@ main {
   text-decoration: none;
   font-size: 1.8vw;
   padding-bottom: 0.2vw;
+  padding-right: 0.6vw;
   text-transform: uppercase;
   margin-left: 1vw;
+  border-bottom: 1px $lighttone solid;
+  border-right: 1px $lighttone solid;
 }
 
 .sign-in-sign-out:hover {
-  color: $maincolor;
-  border-bottom: 1px $maincolor solid;
+  color: white;
+  border-bottom: 1px white solid;
+  border-right: 1px white solid;
+
 }
 
 .content {
