@@ -24,6 +24,12 @@ header {
   z-index: 2;
 }
 
+h1 {
+  font-family: $mainfont;
+  font-size: 3vw;
+  margin-top: -1vw;
+}
+
 .mini-nav {
   margin-right: 2vw;
 }
@@ -130,6 +136,7 @@ main {
 }
 
 #main-info {
+  padding: 9vw 5vw;
   height: 30vw;
   background-color: $midtone;
   margin: 5vw 0vw -1vw 5vw;
@@ -162,6 +169,7 @@ main {
 }
 
 .content {
+  padding: 2vw;
   position: relative;
   top: 0.5vw;
   margin: 2vw;

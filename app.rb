@@ -2,13 +2,29 @@ require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/reloader"
 require "./models"
+require "pry"
 
 set :database, "sqlite3:main.db"
 
 enable :sessions
 
 get '/' do
+  @all = Post.all
   erb :index
+end
+
+get '/post' do
+  erb :post
+end
+
+post '/post' do
+  Post.create(
+    title: params[:title],
+    subject: params[:subject],
+    content: params[:content],
+    user_id: session[:user_id]
+  )
+  redirect '/'
 end
 
 get '/log_in' do

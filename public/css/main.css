@@ -15,6 +15,11 @@ header {
   position: relative;
   z-index: 2; }
 
+h1 {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 3vw;
+  margin-top: -1vw; }
+
 .mini-nav {
   margin-right: 2vw; }
 
@@ -109,6 +114,7 @@ main {
   height: 30vw; }
 
 #main-info {
+  padding: 9vw 5vw;
   height: 30vw;
   background-color: #465875;
   margin: 5vw 0vw -1vw 5vw; }
@@ -136,6 +142,7 @@ main {
   border-right: 1px white solid; }
 
 .content {
+  padding: 2vw;
   position: relative;
   top: 0.5vw;
   margin: 2vw;
