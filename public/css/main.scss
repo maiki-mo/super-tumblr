@@ -9,6 +9,9 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
+  height: 40vw;
+  overflow-x: hidden;
+  background-color: #221818;
 }
 
 header {
@@ -16,7 +19,6 @@ header {
   padding-top: 1vw;
   height: 2.5vw;
   background-color: $lightesttone;
-  border-bottom: 1px white solid;
   margin: 0 1vw 0 1vw;
   position: relative;
   z-index: 2;
@@ -30,7 +32,6 @@ header {
   overflow: hidden;
   width: 10vw;
   height: 10vw;
-  background-color: red;
 }
 
 #mtn {
@@ -41,7 +42,7 @@ header {
 #mt-1 {
   position: relative;
   z-index: -1;
-  bottom: 13vw;
+  bottom: 12.5vw;
   left: 6.15vw;
   background-color: $lightesttone;
   width: 25vw;
@@ -57,7 +58,7 @@ header {
   position: relative;
   z-index: -1;
   bottom: 35vw;
-  left: 22vw;
+  left: 23vw;
 }
 
 #mt-3 {
@@ -82,11 +83,36 @@ header {
   left: 50vw;
 }
 
+#moon-1 {
+  width: 15vw;
+  height: 15vw;
+  background-color: lightgrey;
+  position: relative;
+  left: 80vw;
+  bottom: 7vw;
+  z-index: -2;
+  border-radius: 10vw;
+  animation: rotate-1 30s linear infinite;
+}
+
+#moon-2 {
+  width: 3vw;
+  height: 3vw;
+  background-color: $lighttone;
+  border-radius: 5vw;
+  position: relative;
+  left: 6vw;
+  top: 6vw;
+  animation: rotate 14s linear infinite;
+}
+
 footer {
   margin: 2vw 1vw 0 1vw;
   height: 4vw;
   background-color: $lightesttone;
   overflow: hidden;
+  position: relative;
+  bottom: 10vw;
 }
 
 .container {
@@ -95,14 +121,15 @@ footer {
 }
 
 main {
-  height: 30vw;
   background-color: grey;
   margin: 0 3vw 0 3vw;
   overflow: hidden;
+  position: relative;
+  bottom: 11vw;
 }
 
 #main-info {
-  height: 28vw;
+  height: 110%;
   background-color: $midtone;
   margin: 5vw 0vw -1vw 5vw;
 }
@@ -115,7 +142,7 @@ main {
   position: relative;
   top: 3vw;
   font-family: $mainfont;
-  color: $midtone;
+  color: $lighttone;
   text-decoration: none;
   font-size: 1.8vw;
   padding-bottom: 0.2vw;
@@ -126,4 +153,22 @@ main {
 .sign-in-sign-out:hover {
   color: $maincolor;
   border-bottom: 1px $maincolor solid;
+}
+
+.content {
+  position: relative;
+  top: 0.5vw;
+  margin: 2vw;
+  text-align: center;
+  background-color: $lightesttone;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg) translateX(11vw) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(11vw) rotate(-360deg); }
+}
+
+@keyframes rotate-1 {
+  from { transform: rotate(0deg) translateX(20vw) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
 }

@@ -43,7 +43,11 @@ end
 post "/sign_up" do
   @user = User.create(
     username: params[:username],
-    password: params[:password]
+    password: params[:password],
+    first_name: params[:first_name],
+    last_name: params[:last_name],
+    birthday: params[:birthday],
+    email: params[:email],
   )
 
   # this line does the signing in
