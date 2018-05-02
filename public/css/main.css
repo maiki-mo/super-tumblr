@@ -1,11 +1,7 @@
-$mainfont: 'Yanone Kaffeesatz', sans-serif;
-
-
 body {
   margin: 0;
   border: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 header {
   text-align: center;
@@ -13,31 +9,28 @@ header {
   height: 3.5vw;
   background-color: lightgrey;
   margin: 0 2vw 0 2vw;
-  border-radius: 0 0 15px 15px;
-}
+  border-radius: 0 0 15px 15px; }
 
 .container {
   display: grid;
-  grid-template-columns: 33% 34% 33%;
-}
+  grid-template-columns: 33% 34% 33%; }
 
 #signs {
   margin-right: -10vw;
-  grid-column: 3;
-}
+  grid-column: 3; }
 
 .sign-in-sign-out {
-  font-family: $mainfont;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   border-radius: 15px;
   text-align: center;
   color: grey;
   text-decoration: none;
   font-size: 2vw;
   background-color: white;
-  padding: .7vw;
-}
+  padding: .7vw; }
 
 .sign-in-sign-out:hover {
   color: red;
-  background-color: pink;
-}
+  background-color: pink; }
+
+/*# sourceMappingURL=main.css.map */

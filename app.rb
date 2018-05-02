@@ -6,6 +6,10 @@ set :database, "sqlite3:main.db"
 
 enable :sessions
 
+get '/' do
+  erb :index
+end
+
 get '/log_in' do
   erb :log_in
 end
