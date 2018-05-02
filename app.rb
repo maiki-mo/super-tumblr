@@ -1,6 +1,7 @@
 require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/reloader"
+require "./models"
 
 set :database, "sqlite3:main.db"
 

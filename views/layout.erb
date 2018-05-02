@@ -10,28 +10,44 @@
 </head>
 <body>
   <header>
-    <section class="container">
       <article class="mini-header" id="signs">
         <% if session[:user_id] %>
 
           <!-- only show this code when signed in -->
 
           <!-- clicking on this link will hit the get "/sign-out" route -->
+        <span class="mini-nav">
           <a class="sign-in-sign-out" href="/sign-out" />Sign out</a>
+        </span>s
 
         <% else %>
 
           <!-- only show this code when signed out -->
-          <a class="sign-in-sign-out" href="/sign-in" />Sign In</a>
-          <a class="sign-in-sign-out" href="/sign-up" />Sign Up</a>
+        <span class="mini-nav">
+          <a class="sign-in-sign-out" href="/log_in" />Sign In</a>
+          <a class="sign-in-sign-out" href="/log_out" />Sign Up</a>
+        </span>
         
         <% end %>
       </article>
-    </section>
   </header>
-
+  <section id="mtn">
+    <div id="mt-1" class="mountain">
+    </div>
+    <div id="mt-2" class="mountain">
+    </div>
+    <div id="mt-3" class="mountain">
+    </div>
+    <div id="mt-4" class="mountain">
+    </div>
+  </section>
+  <main>
+    <section id="main-info">
   <%= yield %>
-
+    </section>
+  </main>
+  <footer>
+  </footer>
   <script src="scripts/main.js"></script>
 </body>
 </html>
