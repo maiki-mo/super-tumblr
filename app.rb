@@ -2,13 +2,38 @@ require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/reloader"
 require "./models"
+require "pry"
+require 'nasa_apod'
 
-set :database, "sqlite3:main.db"
+configure :development do
+  set :database, "sqlite3:main.db"
+end
+
+configure :production do
+  set :database, ENV["DATABASE_URL"]
+end
 
 enable :sessions
 
 get '/' do
+  @all = Post.all
+  client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
+  @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
   erb :index
+end
+
+get '/post' do
+  erb :post
+end
+
+post '/post' do
+  Post.create(
+    title: params[:title],
+    subject: params[:subject],
+    content: params[:content],
+    user_id: session[:user_id]
+  )
+  redirect '/'
 end
 
 get '/log_in' do

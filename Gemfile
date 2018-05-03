@@ -1,9 +1,16 @@
-source 'https://rubygems.org' do
+source 'https://rubygems.org'
   gem 'sinatra'
   gem 'sinatra-contrib'
-  gem 'pry'
   gem "activerecord"
-  gem "sqlite3"
   gem "rake"
   gem "sinatra-activerecord"
-end
+  gem 'nasa_apod'
+
+  group :test do
+    gem "sqlite3"
+    gem 'pry'
+  end
+
+  group :production do
+    gem 'pg'
+  end

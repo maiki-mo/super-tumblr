@@ -10,23 +10,28 @@
 </head>
 <body>
   <header>
+    <div id="inner">
+    </div>
       <article class="mini-header" id="signs">
         <% if session[:user_id] %>
 
           <!-- only show this code when signed in -->
 
           <!-- clicking on this link will hit the get "/sign-out" route -->
-        <span class="mini-nav">
+        <nav class="mini-nav">
+          <a class="sign-in-sign-out" href="/" />Main</a>
+          <a class="sign-in-sign-out" href="/post">Create</a>
           <a class="sign-in-sign-out" href="/log_out" />Sign out</a>
-        </span>
+        </nav>
 
         <% else %>
 
           <!-- only show this code when signed out -->
-        <span class="mini-nav">
+        <nav class="mini-nav">
+          <a class="sign-in-sign-out" href="/" />Main</a>
           <a class="sign-in-sign-out" href="/log_in" />Sign In</a>
           <a class="sign-in-sign-out" href="/sign_up" />Sign Up</a>
-        </span>
+        </nav>
         
         <% end %>
       </article>
@@ -45,7 +50,18 @@
     <div id="moon-2">
     </div>
   </div>
+  <section class="title-bar">
+  </section>
   <main>
+  <% if session[:user_id] %>
+    <section class="button-area">
+      <span id="theme">Theme:</span>
+      <button id="day">Day</button>
+      <button id="night">Night</button>
+    </section>
+  <% else %>
+    <section class="button-area"><section>
+  <%end%>
     <section id="main-info">
   <%= yield %>
     </section>
