@@ -1,10 +1,18 @@
 source 'https://rubygems.org' do
   gem 'sinatra'
   gem 'sinatra-contrib'
-  gem 'pry'
   gem "activerecord"
-  gem "sqlite3"
   gem "rake"
   gem "sinatra-activerecord"
   gem 'nasa_apod'
+
+  group :development do
+  gem "sqlite3"
+  gem 'pry'
+  end
+
+  group :production do
+  gem 'pg'
+  end
+
 end

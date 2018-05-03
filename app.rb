@@ -5,15 +5,20 @@ require "./models"
 require "pry"
 require 'nasa_apod'
 
-set :database, "sqlite3:main.db"
+configure :development do
+  set :database, "sqlite3:main.db"
+end
+
+configure :production do
+  set :database, ENV["DATABASE_URL"]
+end
 
 enable :sessions
 
 get '/' do
   @all = Post.all
-  client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY']) #DEMO_KEY usage is limited.
-  @result = client.search(date: Time.now.strftime("20%y-%m-%d")) #You can also pass in a Ruby Date object.
-  erb :index
+  client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
+  @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
 end
 
 get '/post' do
