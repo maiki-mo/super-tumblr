@@ -8,12 +8,20 @@ body {
 
 header {
   text-align: right;
-  padding-top: 1vw;
-  height: 2.5vw;
-  background-color: #C6C8CD;
-  margin: 0 1vw 0 1vw;
   position: relative;
+  width: 120%;
+  left: -10%;
+  height: 0.1vw;
+  background-color: #C6C8CD;
   z-index: 2; }
+
+#inner {
+  position: relative;
+  bottom: 11.5vw;
+  height: 15vw;
+  width: 100%;
+  background-color: #C6C8CD;
+  border-radius: 0 0 50% 50%; }
 
 h1 {
   font-family: "Yanone Kaffeesatz", sans-serif;
@@ -23,11 +31,6 @@ h1 {
 .mini-nav {
   margin-right: 2vw; }
 
-.mountain {
-  overflow: hidden;
-  width: 10vw;
-  height: 10vw; }
-
 #mtn {
   position: relative;
   height: 20vw; }
@@ -35,42 +38,42 @@ h1 {
 #mt-1 {
   position: relative;
   z-index: -1;
-  bottom: 12.5vw;
+  bottom: 7vw;
   left: 6.15vw;
   background-color: #C6C8CD;
-  width: 25vw;
-  height: 25vw;
-  transform: rotate(45deg); }
+  width: 15vw;
+  height: 15vw;
+  transform: rotate(52deg); }
 
 #mt-2 {
   background-color: #465875;
-  transform: rotate(45deg);
-  width: 17vw;
-  height: 17vw;
+  transform: rotate(50deg);
+  width: 13vw;
+  height: 13vw;
   position: relative;
   z-index: -1;
-  bottom: 35vw;
-  left: 23vw; }
+  bottom: 22vw;
+  left: 18vw; }
 
 #mt-3 {
   background-color: #67768F;
-  transform: rotate(45deg);
-  width: 22vw;
-  height: 22vw;
+  transform: rotate(47deg);
+  width: 19vw;
+  height: 19vw;
   position: relative;
   z-index: -2;
-  bottom: 55vw;
+  bottom: 35vw;
   left: 28vw; }
 
 #mt-4 {
   background-color: grey;
-  transform: rotate(45deg);
-  width: 10vw;
-  height: 10vw;
+  transform: rotate(42deg);
+  width: 7vw;
+  height: 7vw;
   position: relative;
   z-index: -3;
-  bottom: 69vw;
-  left: 50vw; }
+  bottom: 50vw;
+  left: 70vw; }
 
 #moon-1 {
   width: 15vw;
@@ -110,7 +113,7 @@ main {
   margin: 0 3vw 0 3vw;
   overflow: hidden;
   position: relative;
-  bottom: 11vw; }
+  bottom: 14vw; }
 
 #main-info {
   padding: 9vw 5vw;
@@ -133,7 +136,8 @@ main {
 
 .sign-in-sign-out {
   position: relative;
-  top: 3vw;
+  right: 10vw;
+  bottom: 10vw;
   font-family: "Yanone Kaffeesatz", sans-serif;
   color: #67768F;
   text-decoration: none;
