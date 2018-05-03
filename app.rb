@@ -2,11 +2,11 @@ require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/reloader"
 require "./models"
-require "pry"
 require 'nasa_apod'
 
 configure :development do
   set :database, "sqlite3:main.db"
+  require 'pry'
 end
 
 configure :production do
