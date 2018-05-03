@@ -1,10 +1,10 @@
 body {
-  height: 50vw;
   margin: 0;
   border: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #221818; }
+  background-color: #221818;
+  height: 70vw; }
 
 header {
   text-align: right;
@@ -110,14 +110,23 @@ main {
   margin: 0 3vw 0 3vw;
   overflow: hidden;
   position: relative;
-  bottom: 11vw;
-  height: 30vw; }
+  bottom: 11vw; }
 
 #main-info {
   padding: 9vw 5vw;
-  height: 30vw;
   background-color: #465875;
   margin: 5vw 0vw -1vw 5vw; }
+
+#ind-img {
+  width: 50vw; }
+
+.small-text {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3vw;
+  text-align: justify;
+  padding: 0 5vw; }
 
 #signs {
   grid-column: 3; }

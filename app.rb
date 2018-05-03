@@ -3,6 +3,7 @@ require "sinatra/activerecord"
 require "sinatra/reloader"
 require "./models"
 require "pry"
+require 'nasa_apod'
 
 set :database, "sqlite3:main.db"
 
@@ -10,6 +11,8 @@ enable :sessions
 
 get '/' do
   @all = Post.all
+  client = NasaApod::Client.new(api_key: "4Kr0STMUmSo0maMoaCacSaoBlAkzDvjD8yxKgAhn") #DEMO_KEY usage is limited.
+  @result = client.search(date: Time.now.strftime("20%y-%m-%d")) #You can also pass in a Ruby Date object.
   erb :index
 end
 

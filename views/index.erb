@@ -1,5 +1,5 @@
 <article class="content">
-  <h1><%=@all[0].title%></h1>
-  <h2> By <%="#{@all[9].user.username}"%> </h2>
-  <p><%=@all[0].subject%></p>
+  <h1><%=@result.title%></h1>
+  <p class="small-text"><%=@result.explanation%></p>
+  <img id="ind-img" src='<%=@result.url%>'>
 </article>

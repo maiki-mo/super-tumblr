@@ -6,12 +6,12 @@ $lightesttone: #C6C8CD;
 
 
 body {
-  height: 50vw;
   margin: 0;
   border: 0;
   padding: 0;
   overflow-x: hidden;
   background-color: #221818;
+  height: 70vw;
 }
 
 header {
@@ -132,14 +132,25 @@ main {
   overflow: hidden;
   position: relative;
   bottom: 11vw;
-  height: 30vw;
 }
 
 #main-info {
   padding: 9vw 5vw;
-  height: 30vw;
   background-color: $midtone;
   margin: 5vw 0vw -1vw 5vw;
+}
+
+#ind-img {
+  width: 50vw;
+}
+
+.small-text {
+  font-family: $mainfont;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3vw;
+  text-align: justify;
+  padding: 0 5vw;
 }
 
 #signs {
