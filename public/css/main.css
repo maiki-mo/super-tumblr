@@ -127,9 +127,7 @@ footer {
   margin: 2vw 1vw 0 1vw;
   height: 6vw;
   background-color: #C6C8CD;
-  overflow: hidden;
-  position: relative;
-  bottom: 10vw; }
+  overflow: hidden; }
 
 .container {
   display: grid;
