@@ -19,6 +19,7 @@ get '/' do
   @all = Post.all
   client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
   @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
+  erb :index
 end
 
 get '/post' do

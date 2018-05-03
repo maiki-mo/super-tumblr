@@ -1,4 +1,4 @@
-source 'https://rubygems.org' do
+source 'https://rubygems.org'
   gem 'sinatra'
   gem 'sinatra-contrib'
   gem "activerecord"
@@ -7,12 +7,10 @@ source 'https://rubygems.org' do
   gem 'nasa_apod'
 
   group :development do
-  gem "sqlite3"
-  gem 'pry'
+    gem "sqlite3"
+    gem 'pry'
   end
 
   group :production do
-  gem 'pg'
+    gem 'pg'
   end
-
-end

@@ -60,15 +60,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord!
-  nasa_apod!
-  pg!
-  pry!
-  rake!
-  sinatra!
-  sinatra-activerecord!
-  sinatra-contrib!
-  sqlite3!
+  activerecord
+  nasa_apod
+  pg
+  pry
+  rake
+  sinatra
+  sinatra-activerecord
+  sinatra-contrib
+  sqlite3
 
 BUNDLED WITH
    1.16.1
