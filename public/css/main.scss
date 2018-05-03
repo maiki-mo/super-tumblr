@@ -1,4 +1,5 @@
 $mainfont: 'Yanone Kaffeesatz', sans-serif;
+$titlefont: 'Gugi', cursive;
 $maincolor: #1D304D;
 $lighttone: #67768F;
 $midtone: #465875;
@@ -11,7 +12,6 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: #221818;
-  // background-color: white;
   height: 70vw;
 }
 
@@ -35,10 +35,23 @@ header {
 }
 
 h1 {
-  font-family: $mainfont;
+  font-family: $titlefont;
   font-size: 3vw;
   margin-top: -1vw;
   text-transform: uppercase;
+}
+
+#title-text {
+  font-size: 5vw;
+  margin: 0 0 0 4vw;
+  display: inline-block;
+  padding-top: 2vw;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 
 .mini-nav {
@@ -145,6 +158,7 @@ button {
   left: 6vw;
   top: 6vw;
   animation: rotate 18s linear infinite;
+  animation-direction: reverse;
 }
 
 footer {
@@ -160,9 +174,11 @@ footer {
 }
 
 .title-bar {
+  font-size: 4vw;
+  font-family: $titlefont;
   height: 10vw;
   width: 70vw;
-  background-color: lightgrey;
+  background-color: $lighttone;
   margin: 0 2vw 0 3vw;
   position: relative;
   bottom: 10vw;
@@ -202,7 +218,7 @@ main {
 .sign-in-sign-out {
   position: relative;
   right: 10vw;
-  bottom: 10vw;
+  bottom: 8vw;
   font-family: $mainfont;
   color: $lighttone;
   text-decoration: none;

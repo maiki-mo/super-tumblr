@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-  <title>Dumblr</title>
+  <link href="/images/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+  <title>Stumblr</title>
 </head>
 <body>
   <header>
@@ -22,6 +24,7 @@
           <a class="sign-in-sign-out" href="/" />Main</a>
           <a class="sign-in-sign-out" href="/post">Create</a>
           <a class="sign-in-sign-out" href="/log_out" />Sign out</a>
+          <a class="sign-in-sign-out" href="/settings" />Settings</a>
         </nav>
 
         <% else %>
@@ -51,6 +54,8 @@
     </div>
   </div>
   <section class="title-bar">
+    <h1 id="title-text">Stumblr:</h1>
+    <h5>The Astronomical Blog</h5>
   </section>
   <main>
   <% if session[:user_id] %>
