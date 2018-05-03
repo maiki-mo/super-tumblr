@@ -3,7 +3,7 @@ body {
   border: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #221818;
   height: 70vw; }
 
 header {
@@ -72,7 +72,7 @@ h1 {
   width: 7vw;
   height: 7vw;
   position: relative;
-  z-index: -3;
+  z-index: -2;
   bottom: 50vw;
   left: 70vw; }
 
@@ -106,7 +106,7 @@ button {
   position: relative;
   left: 80vw;
   bottom: 7vw;
-  z-index: -2;
+  z-index: -3;
   border-radius: 10vw;
   animation: rotate-1 35s linear infinite; }
 
@@ -174,9 +174,7 @@ main {
   border-right: 1px #67768F solid; }
 
 .sign-in-sign-out:hover {
-  color: white;
-  border-bottom: 1px white solid;
-  border-right: 1px white solid; }
+  color: white; }
 
 .content {
   padding: 2vw;
