@@ -101,7 +101,7 @@ h1 {
   bottom: 7vw;
   z-index: -2;
   border-radius: 10vw;
-  animation: rotate-1 30s linear infinite;
+  animation: rotate-1 35s linear infinite;
 }
 
 #moon-2 {
@@ -112,7 +112,7 @@ h1 {
   position: relative;
   left: 6vw;
   top: 6vw;
-  animation: rotate 14s linear infinite;
+  animation: rotate 18s linear infinite;
 }
 
 footer {
@@ -134,11 +134,11 @@ main {
   margin: 0 3vw 0 3vw;
   overflow: hidden;
   position: relative;
-  bottom: 14vw;
+  bottom: 15vw;
 }
 
 #main-info {
-  padding: 9vw 5vw;
+  padding: 2vw 5vw;
   background-color: $midtone;
   margin: 5vw 0vw -1vw 5vw;
 }
