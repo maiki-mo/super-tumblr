@@ -51,6 +51,15 @@
     </div>
   </div>
   <main>
+  <% if session[:user_id] %>
+    <section class="button-area">
+      <span id="theme">Theme:</span>
+      <button>Day</button>
+      <button>Night</button>
+    </section>
+  <% else %>
+    <section class="button-area"><section>
+  <%end%>
     <section id="main-info">
   <%= yield %>
     </section>

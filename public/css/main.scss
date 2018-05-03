@@ -10,7 +10,8 @@ body {
   border: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #221818;
+  // background-color: #221818;
+  background-color: white;
   height: 70vw;
 }
 
@@ -37,6 +38,7 @@ h1 {
   font-family: $mainfont;
   font-size: 3vw;
   margin-top: -1vw;
+  text-transform: uppercase;
 }
 
 .mini-nav {
@@ -50,7 +52,7 @@ h1 {
 
 #mt-1 {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   bottom: 7vw;
   left: 6.15vw;
   background-color: $lightesttone;
@@ -65,7 +67,7 @@ h1 {
   width: 13vw;
   height: 13vw;
   position: relative;
-  z-index: -1;
+  z-index: -2;
   bottom: 22vw;
   left: 18vw;
 }
@@ -76,9 +78,9 @@ h1 {
   width: 19vw;
   height: 19vw;
   position: relative;
-  z-index: -2;
+  z-index: -1;
   bottom: 35vw;
-  left: 28vw;
+  left: 25vw;
 }
 
 #mt-4 {
@@ -90,6 +92,32 @@ h1 {
   z-index: -3;
   bottom: 50vw;
   left: 70vw;
+}
+
+.button-area {
+  text-align: right;
+  margin: 1.5vw 1.5vw 0 0;
+}
+
+.button-area>span {
+  color: white;
+  font-family: $mainfont;
+  font-size: 1.7vw;
+  text-transform: uppercase;
+  position: relative;
+  top: 0.2vw;
+  right: 0.2vw;
+}
+
+button {
+  text-transform: uppercase;
+  background-color: $midtone;
+  border: 0;
+  border-bottom: 0.15vw $maincolor solid;
+  border-right: 0.15vw $maincolor solid;
+  font-size: 1.2vw;
+  padding: 0.3vw 0.4vw 0.1vw 0.4vw;
+  margin-left: 0.5vw;
 }
 
 #moon-1 {
@@ -140,7 +168,7 @@ main {
 #main-info {
   padding: 2vw 5vw;
   background-color: $midtone;
-  margin: 5vw 0vw -1vw 5vw;
+  margin: 2vw 0vw -1vw 5vw;
 }
 
 #ind-img {
