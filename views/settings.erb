@@ -1,13 +1,13 @@
 <article class="content">
 <% if session[:user_id] %>
-  <h1>Deactivate Your Profile</h1>
+  <h1 id="deact">Deactivate Your Profile</h1>
   <h3>Hey, man.  Think about what you're doing.  Do you really want to end this relationship?</h3>
   <form action="/settings" method="post">
     <input type="text" name="title" id="title" placeholder="Please input your profile name to deactivate">
     <input type="submit" value="Abort!">
   </form>
 <% else %>
-  <h1>You need to be logged in to make a post.</h1>
+  <h1>You need to be logged in to access this feature.</h1>
     <a href="/log_in"><button class="log in">LOG IN</button></a>
 <% end %>
 </article>

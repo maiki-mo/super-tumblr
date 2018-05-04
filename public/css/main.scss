@@ -90,7 +90,6 @@ header {
   grid-column: 2;
   grid-row: 1;
   background-color: $midtone;
-  // border: 2px purple solid;
 }
 
 #real-name {
@@ -101,19 +100,17 @@ header {
   grid-column: 1;
   grid-row: 3;
   background-color: $midtone;
-  // border: 2px green solid;
 }
 
 #content {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.1vw;
+  font-size: 1vw;
   padding: 0 2vw;
-  margin-top: -6vw;
+  margin-top: -4.2vw;
   grid-column: 2;
   grid-row: 3;  
   background-color: $midtone;
-  // border: 2px blue solid;
 }
 
 h1 {
@@ -301,7 +298,8 @@ main {
   position: relative;
   right: 10vw;
   bottom: 8vw;
-  font-family: $mainfont;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
   color: $lighttone;
   text-decoration: none;
   font-size: 1.1vw;
@@ -335,6 +333,15 @@ main {
   border-bottom: 0.2vw white solid;
 }
 
+#deact {
+  width: 38vw;
+  position: relative;
+  right: 11vw;
+  margin: -1.7vw 28vw 2vw 28vw;
+  border-right: 0.2vw white solid;
+  border-bottom: 0.2vw white solid;
+}
+
 .forms {
   width: 30vw;
   height: 2vw;
@@ -354,6 +361,7 @@ main {
   margin: 2vw 2vw 2vw 2vw;
   padding: 1vw 1vw;
   background-color: $midtone;
+  cursor: pointer;
 }
 
 @keyframes rotate {

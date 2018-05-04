@@ -76,7 +76,7 @@ post "/log_in" do
   else
     # if user does not exist or password does not match then
     #   redirect the user to the sign in page
-    redirect "/"
+    redirect "/log_in"
   end
 end
 
