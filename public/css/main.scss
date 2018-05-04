@@ -37,11 +37,23 @@ header {
 #pinned {
   width: 3vw;
   position: relative;
-  right: 32vw;
-  top: 5vw;
+  right: 30.5vw;
+  bottom: 1vw;
+  z-index: 3;
+}
+
+#real {
+  text-transform: uppercase;
+  position: relative;
+  bottom: 0.15vw;
+  color: white;
+  margin-left: 1vw;
+  font-size: 1vw;
 }
 
 .post-feed {
+  position: relative;
+  bottom: 4vw;
   border-right: 0.3vw white solid;
   border-bottom: 0.3vw white solid;
   padding: 0 2vw;
@@ -68,14 +80,13 @@ header {
   grid-column: 2;
   grid-row: 2;
   background-color: $midtone;
-  // border: 2px red solid;
-}
-
-h7 {
-  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #username {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: white;
   grid-column: 2;
   grid-row: 1;
   background-color: $midtone;
@@ -83,6 +94,9 @@ h7 {
 }
 
 #real-name {
+  position: relative;
+  bottom: 1.5vw;
+  left: 0.4vw;
   font-size: 1vw;
   grid-column: 1;
   grid-row: 3;
@@ -95,7 +109,7 @@ h7 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.1vw;
   padding: 0 2vw;
-  margin-top: -7vw;
+  margin-top: -6.5vw;
   grid-column: 2;
   grid-row: 3;  
   background-color: $midtone;
@@ -309,6 +323,7 @@ main {
   position: relative;
   top: 0.5vw;
   margin: 2vw;
+  margin-bottom: 3vw;
   text-align: center;
   background-color: $midtone;
 }

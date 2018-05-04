@@ -24,13 +24,6 @@ get '/' do
   erb :index
 end
 
-get '/feed' do
-  @all_posts = Post.all.reverse
-  @all_users = User.all
-  @all_profiles = Profile.all
-  erb :feed
-end
-
 get '/post' do
   erb :post
 end
@@ -43,7 +36,7 @@ post '/post' do
     user_id: session[:user_id],
     profile_id: session[:user_id]
   )
-  redirect '/feed'
+  redirect '/'
 end
 
 get '/settings' do
@@ -79,7 +72,7 @@ post "/log_in" do
     # this line signs a user in
     session[:user_id] = @user.id
 
-    redirect "/feed"
+    redirect "/"
   else
     # if user does not exist or password does not match then
     #   redirect the user to the sign in page
@@ -118,5 +111,5 @@ post "/sign_up" do
   session[:user_id] = @user.id
 
   # assuming this page exists
-  redirect "/feed"
+  redirect "/"
 end

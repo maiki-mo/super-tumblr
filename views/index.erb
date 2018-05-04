@@ -3,23 +3,25 @@
   <section class="post-feed">
     <img id="avatar" src="images/avatar.png">
       <h1 id="title"><%=@result.title%></h1>
-      <h2 id="username"> By NASA Photo of the Day </h2>
+      <h2 id="username"> NASA Photo of the Day </h2>
       <p id="content"><%=@result.explanation%></p>
       <a href='<%=@result.url%>'><img style="width: 15vw;" id="real-name" src='<%=@result.url%>'></a>
   </section>
 </article>
 
-<% @all_posts.each_with_index do | element, i | %>
-  <% break if i == 21%>
+<% count = 0 %>
+<% for element in @all_posts %>
+<% break if count == 20%>
   <% if element.user == nil %>
   <% else %>
     <article class="content">
         <section class="post-feed">
           <img id="avatar" src="images/avatar.png">
-            <h1 id="title"><%=element.title%></h1>
-            <h2 id="username"> By <%="#{element.user.username}"%><i> AKA <%="#{element.profile.first_name} #{element.profile.last_name}"%></i></h2>
+            <h1 id="title"><b><i><%=element.title%></i></b></h1>
+            <h2 id="username"><%="#{element.user.username}"%><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
             <p id="content"><%=element.content%></p>
         </section>
     </article>
+  <% count += 1 %>
   <% end %>
 <% end %>
