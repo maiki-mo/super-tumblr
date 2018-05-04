@@ -1,15 +1,14 @@
 <article class="content">
 <% if session[:user_id] %>
-  <h1>Create a Post</h1>
-
+  <h1 id="post-up">Create a Post</h1>
   <form action="/post" method="post">
-    <input type="text" name="title" id="title" placeholder="Title of Post">
-    <input type="text" name="subject" id="subject" placeholder="Subject of Post">
-    <input type="text" name="content" id="content" placeholder="Content of Post">
-    <input type="submit" value="Launch!">
+    <input class="forms" type="text" name="title" id="post-title" placeholder="Title of Post"><br />
+    <input class="forms" type="text" name="subject" id="post-subject" placeholder="Subject of Post"><br />
+    <input class="forms" type="text" name="content" id="post-content" placeholder="Content of Post"> <br />
+    <input id="sign-button" type="submit" value="Launch!">
   </form>
 <% else %>
   <h1>You need to be logged in to make a post.</h1>
-    <a href="/log_in"><button class="log in">LOG IN</button></a>
+    <a href="/log_in"><button class="sign-button">LOG IN</button></a>
 <% end %>
 </article>

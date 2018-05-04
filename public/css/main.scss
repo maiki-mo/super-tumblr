@@ -382,6 +382,19 @@ h5 {
   margin-left: 1.4vw;
 }
 
+#post-up {
+  position: relative;
+  right: 4vw;
+  width: 22vw;
+  margin: -1.7vw 28vw 2vw 28vw;
+  border-right: 0.2vw white solid;
+  border-bottom: 0.2vw white solid;
+}
+
+#post-content {
+  height: 5vw;
+}
+
 @keyframes rotate {
   from { transform: rotate(0deg) translateX(11vw) rotate(0deg); }
   to   { transform: rotate(360deg) translateX(11vw) rotate(-360deg); }
