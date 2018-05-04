@@ -127,7 +127,8 @@ h1 {
   padding-top: 0.2vw;
 }
 
-h5 {
+#title-h5 {
+  font-size: 3vw;
   margin: 0;
   padding: 0;
   display: inline-block;
@@ -362,6 +363,23 @@ main {
   padding: 1vw 1vw;
   background-color: $midtone;
   cursor: pointer;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+
+#del-form {
+  margin-left: 1.4vw;
 }
 
 @keyframes rotate {
