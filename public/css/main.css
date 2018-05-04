@@ -89,7 +89,7 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.1vw;
   padding: 0 2vw;
-  margin-top: -6.5vw;
+  margin-top: -6vw;
   grid-column: 2;
   grid-row: 3;
   background-color: #465875; }
@@ -259,7 +259,7 @@ main {
   font-family: "Prosto One", cursive;
   color: #67768F;
   text-decoration: none;
-  font-size: 1.8vw;
+  font-size: 1.1vw;
   padding-bottom: 0.2vw;
   padding-right: 0.6vw;
   text-transform: uppercase;
@@ -291,7 +291,17 @@ main {
   margin: 2vw 2vw 2vw 0;
   background-color: #465875;
   border-right: 0.2vw white solid;
-  border-bottom: 0.2vw white solid; }
+  border-bottom: 0.2vw white solid;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+#sign-button {
+  text-transform: uppercase;
+  font-size: 1.6vw;
+  border: 0.2vw white solid;
+  margin: 2vw 2vw 2vw 2vw;
+  padding: 1vw 1vw;
+  background-color: #465875; }
 
 @keyframes rotate {
   from {
