@@ -5,6 +5,7 @@ class CreatePostsTable < ActiveRecord::Migration[5.2]
       t.string :subject
       t.text :content
       t.integer :user_id
+      t.integer :profile_id
       t.datetime :created_at
       t.datetime :updated_at
     end
