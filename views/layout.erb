@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
   <title>Stumblr</title>
 </head>
-<body>
+<body onload="backCheck()">
   <header>
     <div id="inner">
     </div>
@@ -21,7 +21,7 @@
 
           <!-- clicking on this link will hit the get "/sign-out" route -->
         <nav class="mini-nav">
-          <a class="sign-in-sign-out" href="/" />Main</a>
+          <a class="sign-in-sign-out" href="/" />Home</a>
           <a class="sign-in-sign-out" href="/post">Create</a>
           <a class="sign-in-sign-out" href="/log_out" />Sign out</a>
           <a class="sign-in-sign-out" href="/settings" />Settings</a>
@@ -31,7 +31,6 @@
 
           <!-- only show this code when signed out -->
         <nav class="mini-nav">
-          <a class="sign-in-sign-out" href="/" />Main</a>
           <a class="sign-in-sign-out" href="/log_in" />Sign In</a>
           <a class="sign-in-sign-out" href="/sign_up" />Sign Up</a>
         </nav>

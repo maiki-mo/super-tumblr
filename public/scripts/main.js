@@ -1,9 +1,20 @@
 let buttonDay = document.querySelector("#day");
 let buttonNight = document.querySelector("#night");
+var background = document.querySelector("body").style;
+var bgColor;
+
+function backCheck() {
+  if (bgColor === "") {
+    changeDisplaDay();
+  } else {
+    changeDisplayNight();
+  }
+}
 
 function changeDisplayNight() {
   document.querySelector("body").style.backgroundColor = "#221818";
   nav = document.querySelectorAll(".sign-in-sign-out");
+  bgColor = document.querySelector("body");
     for (elements in nav) {
       nav[elements].style.backgroundColor = "";
       nav[elements].style.paddingLeft = "0";

@@ -1,5 +1,22 @@
-<article class="content">
-  <h1><%=@all[0].title%></h1>
-  <h2> By <%="#{@all[9].user.username}"%> </h2>
-  <p><%=@all[0].subject%></p>
-</article>
+<% @all_posts.each_with_index do | element, i | %>
+  <% break if i == 21%>
+    <article class="content">
+        <section class="post-feed">
+          <img id="avatar" src="images/avatar.png">
+            <h1 id="title"><%=element.title%></h1>
+            <h2 id="username"> By <%="#{element.user.username}"%> </h2>
+            <h6 id="real-name"><i> AKA <%="#{element.user.first_name} #{element.user.last_name}"%></i></h6>
+            <p id="content"><%=element.content%></p>
+        </section>
+    </article>
+<%end%>
+
+<script>
+  function backCheck() {
+    if (bgColor === "") {
+      changeDisplaDay();
+    } else {
+      changeDisplayNight();
+    }
+  }
+</script>
