@@ -18,6 +18,9 @@ enable :sessions
 get '/' do
   client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
   @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
+  @all_posts = Post.all.reverse
+  @all_users = User.all
+  @all_profiles = Profile.all
   erb :index
 end
 

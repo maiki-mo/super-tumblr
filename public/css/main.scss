@@ -34,12 +34,19 @@ header {
   border-radius: 0 0 50% 50%;
 }
 
+#pinned {
+  width: 3vw;
+  position: relative;
+  right: 32vw;
+  top: 5vw;
+}
+
 .post-feed {
   border-right: 0.3vw white solid;
   border-bottom: 0.3vw white solid;
   padding: 0 2vw;
   text-align: justify;
-  background-color: $lightesttone;
+  background-color: $midtone;
   display: grid;
   grid-template-columns: 25% 75%;
   grid-template-rows: 20% 20% 10% 30% 20%;
@@ -55,6 +62,9 @@ header {
 }
 
 #title {
+  position: relative;
+  bottom: 1.5vw;
+  font-size: 2.2vw;
   grid-column: 2;
   grid-row: 2;
   background-color: $midtone;
@@ -81,7 +91,11 @@ h7 {
 }
 
 #content {
-  margin-top: -5vw;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1vw;
+  padding: 0 2vw;
+  margin-top: -7vw;
   grid-column: 2;
   grid-row: 3;  
   background-color: $midtone;
@@ -296,7 +310,7 @@ main {
   top: 0.5vw;
   margin: 2vw;
   text-align: center;
-  background-color: $lightesttone;
+  background-color: $midtone;
 }
 
 @keyframes rotate {
