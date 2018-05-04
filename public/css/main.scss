@@ -1,5 +1,5 @@
-$mainfont: 'Yanone Kaffeesatz', sans-serif;
-$titlefont: 'Gugi', cursive;
+$mainfont: 'Prosto One', cursive;
+$titlefont: 'Cairo', sans-serif;
 $maincolor: #1D304D;
 $lighttone: #67768F;
 $midtone: #465875;
@@ -12,7 +12,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: #221818;
-  height: 70vw;
+  height: 60vw;
 }
 
 header {
@@ -83,7 +83,7 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#username {
+#username-display {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: white;
@@ -127,7 +127,7 @@ h1 {
   font-size: 5vw;
   margin: 0 0 0 4vw;
   display: inline-block;
-  padding-top: 2vw;
+  padding-top: 0.2vw;
 }
 
 h5 {
@@ -261,9 +261,9 @@ footer {
   height: 10vw;
   width: 70vw;
   background-color: $lighttone;
-  margin: 0 2vw 0 3vw;
+  margin: 0 2vw 0 2vw;
   position: relative;
-  bottom: 10vw;
+  bottom: 12vw;
 }
 
 main {
@@ -277,7 +277,7 @@ main {
 #main-info {
   padding: 2vw 5vw;
   background-color: $midtone;
-  margin: 2vw 0vw -1vw 5vw;
+  margin: 4vw -1.5vw -1vw 5vw;
 }
 
 #ind-img {
@@ -321,11 +321,29 @@ main {
 .content {
   padding: 2vw;
   position: relative;
-  top: 0.5vw;
+  top: vw;
   margin: 2vw;
   margin-bottom: 3vw;
   text-align: center;
   background-color: $midtone;
+}
+
+// Form Stuff //
+
+#sign-up {
+  margin: -1.7vw 28vw 2vw 28vw;
+  border-right: 0.2vw white solid;
+  border-bottom: 0.2vw white solid;
+}
+
+.forms {
+  width: 30vw;
+  height: 2vw;
+  border: 0;
+  margin: 2vw 2vw 2vw 0;
+  background-color: $midtone;
+  border-right: 0.2vw white solid;
+  border-bottom: 0.2vw white solid;
 }
 
 @keyframes rotate {
