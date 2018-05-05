@@ -395,6 +395,19 @@ h5 {
   height: 5vw;
 }
 
+.spaceman {
+  animation-name: glide;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+#spaceman-img {
+  width: 10vw;
+  animation-name: spinner;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
 @keyframes rotate {
   from { transform: rotate(0deg) translateX(11vw) rotate(0deg); }
   to   { transform: rotate(360deg) translateX(11vw) rotate(-360deg); }
@@ -403,4 +416,14 @@ h5 {
 @keyframes rotate-1 {
   from { transform: rotate(0deg) translateX(20vw) rotate(0deg); }
   to   { transform: rotate(360deg) translateX(20vw) rotate(-360deg); }
+}
+
+@keyframes glide {
+  from { transform: translateX(-20vw); }   
+  to { transform: translateX(110vw); }
+}
+
+@keyframes spinner {
+  from { transform: rotateZ(0deg) }   
+  to { transform: rotateZ(360deg); }
 }
