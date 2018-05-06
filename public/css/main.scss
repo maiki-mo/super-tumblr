@@ -45,9 +45,9 @@ header {
 #pinned {
   width: 3vw;
   position: relative;
-  right: 55vw;
+  left: 21vw;
   top: 5vw;
-  z-index: 3;
+  z-index: 5;
 }
 
 #real {
@@ -285,6 +285,7 @@ main {
 
 #main-info {
   padding: 2vw 5vw;
+  padding-top: 0vw;
   background-color: $midtone;
   margin: 4vw -1.5vw -1vw 5vw;
 }
