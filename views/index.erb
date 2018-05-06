@@ -19,10 +19,11 @@
 <% break if count == 20%>
   <% if element.user == nil %>
   <% else %>
+    <% num = rand(4) %>
     <article class="content">
         <section class="post-feed">
         <div id="box-1">
-          <img id="avatar" src="images/avatar.png">
+          <img id="avatar" src="images/avatar-<%=num%>.png">
           <h2 id="username-display"><%="#{element.user.username}"%><br /><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
         </div>
         <div id="box-2">
