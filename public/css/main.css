@@ -65,7 +65,7 @@ header {
 
 #title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0.5vw 2vw 1.5vw 2.5vw;
+  margin: 0.5vw 2vw 1.8vw 2.5vw;
   grid-row: 1; }
 
 #photo {
@@ -93,7 +93,7 @@ h4 {
   font-size: 0.8vw; }
 
 #content {
-  padding: 0 3vw;
+  padding: 0 2vw 0 2.5vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1vw; }
 
@@ -213,9 +213,14 @@ button {
 
 footer {
   margin: 0vw 1vw 0 1vw;
+  padding: 1vw 2vw 0 0;
   height: 6vw;
   background-color: #C6C8CD;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: right; }
+
+.foot-buttons {
+  background-color: #C6C8CD; }
 
 .container {
   display: grid;

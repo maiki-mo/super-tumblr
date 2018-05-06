@@ -57,15 +57,6 @@
     <h5 id="title-h5">The Astronomical Blog</h5>
   </section>
   <main>
-  <% if session[:user_id] %>
-    <section class="button-area">
-      <span id="theme">Theme:</span>
-      <button id="day">Day</button>
-      <button id="night">Night</button>
-    </section>
-  <% else %>
-    <section class="button-area"><section>
-  <%end%>
     <section id="main-info">
   <%= yield %>
     </section>
@@ -74,6 +65,14 @@
       <img id="spaceman-img" src="images/astronaut.png">
     </div>
   <footer>
+    <% if session[:user_id] %>
+      <a href="/log_out"><button class="foot-buttons">sign out</button></a>
+      <a href="#first"><button class="foot-buttons">back to top</button></a>
+    <% else %>
+      <a href="/sign_up"><button class="foot-buttons">sign up</button></a>
+      <a href="/log_in"><button class="foot-buttons">Sign in</button></a>
+      <a href="#first"><button class="foot-buttons">back to top</button></a>
+    <% end %>
   </footer>
   <script src="scripts/main.js"></script>
 </body>

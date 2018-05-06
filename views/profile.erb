@@ -12,10 +12,14 @@
     <% else %>
       <article class="content">
           <section class="post-feed">
+          <div id="box-1">
             <img id="avatar" src="images/avatar.png">
-              <h1 id="title"><b><i><%=element.title%></i></b></h1>
-              <h2 id="username-display"><%="#{element.user.username}"%><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
-              <p id="content"><%=element.content%></p>
+            <h2 id="username-display"><%="#{element.user.username}"%><br /><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
+          </div>
+          <div id="box-2">
+            <h1 id="title"><%=element.title%></h1>
+            <p id="content"><%=element.content%></p>
+          </div>
           </section>
       </article>
     <% count += 1 %>
