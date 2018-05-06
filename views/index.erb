@@ -1,12 +1,17 @@
+<img id="pinned" src="images/thumb.png">
 <article class="content">
-  <img id="pinned" src="images/thumb.png">
-  <section class="post-feed">
-    <img id="avatar" src="images/avatar.png">
-      <h1 id="title"><i><%=@result.title%></i></h1>
+    <section class="post-feed">
+    <div id="box-1">
+      <img id="avatar" src="images/avatar.png">
       <h2 id="username-display"> NASA </h2>
-      <p id="content"><%=@result.explanation%></p>
-      <a href='<%=@result.url%>'><img id="photo" src='<%=@result.url%>'></a>
-  </section>
+      <h4 id="date"> <%= @result.date %> </h4>
+    </div>
+      <div id="box-2">
+        <h1 id="title"><%=@result.title%></h1>
+        <a href='<%=@result.url%>'><img id="photo" src='<%=@result.url%>'></a>
+        <p id="content"><%=@result.explanation%></p>
+      </div>
+    </section>
 </article>
 
 <% count = 0 %>
@@ -16,11 +21,14 @@
   <% else %>
     <article class="content">
         <section class="post-feed">
+        <div id="box-1">
           <img id="avatar" src="images/avatar.png">
-            <h1 id="title"><b><i><%=element.title%></i></b></h1>
-            <hr>
-            <h2 id="username-display"><%="#{element.user.username}"%><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
-            <p id="content"><%=element.content%></p>
+          <h2 id="username-display"><%="#{element.user.username}"%><br /><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
+        </div>
+        <div id="box-2">
+          <h1 id="title"><b><i><%=element.title%></i></b></h1>
+          <p id="content"><%=element.content%></p>
+        </div>
         </section>
     </article>
   <% count += 1 %>
