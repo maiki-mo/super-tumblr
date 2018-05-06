@@ -40,8 +40,6 @@ header {
 
 #real {
   text-transform: uppercase;
-  position: relative;
-  bottom: 0.15vw;
   color: white;
   font-size: 0.8vw; }
 
