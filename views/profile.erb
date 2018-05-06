@@ -1,0 +1,40 @@
+<article class="content">
+  <h1 style=>Recent Posts</h1>
+  <hr>
+  <br />
+  <br />
+  <br />
+  <article class="profile-posts">
+    <% count = 0 %>
+  <% for element in @user_posts %>
+  <% break if count == 20%>
+    <% if element.user == nil %>
+    <% else %>
+      <article class="content">
+          <section class="post-feed">
+            <img id="avatar" src="images/avatar.png">
+              <h1 id="title"><b><i><%=element.title%></i></b></h1>
+              <h2 id="username-display"><%="#{element.user.username}"%><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
+              <p id="content"><%=element.content%></p>
+          </section>
+      </article>
+    <% count += 1 %>
+    <% end %>
+  <% end %>
+  </article>
+    <h1>Deactivate Your Profile</h1>
+    <hr>
+  <article class="content">
+    <% if session[:user_id] %>
+      <h3>Do you really want to do what no man has done before?</h3>
+      <form action="/profile" method="post">
+        <input class="forms" type="text" name="title" id="title">
+          <br />
+        <input style="margin-top: 0;" id="sign-button" type="submit" value="ABORT!">
+      </form>
+    <% else %>
+      <h1>You need to be logged in to access this feature.</h1>
+        <a href="/log_in"><button class="sign-button">LOG IN</button></a>
+    <% end %>
+  </article>
+</article>

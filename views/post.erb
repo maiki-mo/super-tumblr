@@ -1,14 +1,16 @@
 <article class="content">
-<% if session[:user_id] %>
-  <h1 id="post-up">Create a Post</h1>
-  <form action="/post" method="post">
-    <input class="forms" type="text" name="title" id="post-title" placeholder="Title of Post"><br />
-    <input class="forms" type="text" name="subject" id="post-subject" placeholder="Subject of Post"><br />
-    <input class="forms" type="text" name="content" id="post-content" placeholder="Content of Post"> <br />
-    <input id="sign-button" type="submit" value="Launch!">
-  </form>
-<% else %>
-  <h1>You need to be logged in to make a post.</h1>
-    <a href="/log_in"><button class="sign-button">LOG IN</button></a>
-<% end %>
+<h1>Create a Post</h1>
+  <hr>
+    <% if session[:user_id] %>
+      <form action="/post" method="post">
+        <input class="forms" type="text" name="title" id="post-title" placeholder="Title of Post"><br />
+        <input class="forms" type="text" name="subject" id="post-subject" placeholder="Subject of Post"><br />
+        <input class="forms" type="text" name="content" id="post-content" placeholder="Content of Post"> <br />
+        <input id="sign-button" type="submit" value="Launch!">
+      </form>
+    <% else %>
+      <h1>You need to be logged in to make a post.</h1>
+      <hr>
+        <a href="/log_in"><button style="position: relative; right: 2vw;" id="sign-button">LOG IN</button></a>
+    <% end %>
 </article>

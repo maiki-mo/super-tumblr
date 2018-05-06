@@ -19,8 +19,6 @@ get '/' do
   client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
   @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
   @all_posts = Post.all.reverse
-  @all_users = User.all
-  @all_profiles = Profile.all
   erb :index
 end
 
@@ -39,16 +37,18 @@ post '/post' do
   redirect '/'
 end
 
-get '/settings' do
-  erb :settings
+get '/profile' do
+  id = session[:user_id]
+  @user_posts = User.find(id).posts.reverse
+  erb :profile
 end
 
-post '/settings' do
+post '/profile' do
   title = params[:title]
   id = session[:user_id]
   user = User.find(id)
   if title != user.username
-    redirect '/settings'
+    redirect '/profile'
   else
     user.posts.destroy
     user.profile.destroy

@@ -3,9 +3,9 @@
   <section class="post-feed">
     <img id="avatar" src="images/avatar.png">
       <h1 id="title"><i><%=@result.title%></i></h1>
-      <h2 id="username-display"> NASA Photo of the Day </h2>
+      <h2 id="username-display"> NASA </h2>
       <p id="content"><%=@result.explanation%></p>
-      <a href='<%=@result.url%>'><img style="width: 15vw;" id="real-name" src='<%=@result.url%>'></a>
+      <a href='<%=@result.url%>'><img id="photo" src='<%=@result.url%>'></a>
   </section>
 </article>
 
@@ -18,6 +18,7 @@
         <section class="post-feed">
           <img id="avatar" src="images/avatar.png">
             <h1 id="title"><b><i><%=element.title%></i></b></h1>
+            <hr>
             <h2 id="username-display"><%="#{element.user.username}"%><span id="real">( <i><%="#{element.profile.first_name} #{element.profile.last_name}"%></i> )</span></h2>
             <p id="content"><%=element.content%></p>
         </section>
