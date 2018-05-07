@@ -10,7 +10,7 @@
   <title>Stumblr</title>
 </head>
   <% if @user != nil %>
-    <span id="dom-state"><%="#{@user.dom_state}"%></span>
+    <span id="dom-state"><%="#{user.dom_state}"%></span>
   <% end %>
 <body onload="backCheck()">
   <header>
@@ -60,7 +60,15 @@
     <h5 id="title-h5">The Astronomical Blog</h5>
   </section>
   <main>
+  <% if session[:user_id] %>
+    <section class="button-area">
+      <span id="theme">Theme:</span>
+      <button onclick"<% changeState %>" id="day">Day</button>
+      <button onclick"<% changeState %>" id="night">Night</button>
     </section>
+  <% else %>
+    <section class="button-area"><section>
+  <%end%>
     <section id="main-info">
   <%= yield %>
     </section>

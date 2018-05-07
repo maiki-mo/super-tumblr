@@ -15,7 +15,20 @@ end
 
 enable :sessions
 
+# def changeState
+#   if User.find(session[:user_id]) != nil
+#     state = User.find(session[:user_id]).dom_state
+#   end
+# end
+
 get '/' do
+  def changeState
+    if User.find(session[:user_id]) != nil
+      state = User.find(session[:user_id]).dom_state
+      user = User.find(session[:user_id])
+      return user.dom_state
+    end
+  end
   client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
   @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
   @all_posts = Post.all.reverse
@@ -98,6 +111,7 @@ post "/sign_up" do
   @user = User.create(
     username: params[:username],
     password: params[:password],
+    dom_state: "night"
   )
   Profile.create(
     first_name: params[:first_name],
