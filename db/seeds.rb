@@ -7,7 +7,7 @@ require "./models"
 @post_array.shift()
 
 for elements in @user_array
-  User.create(username: "#{elements[3]}", password: "#{elements[4]}")
+  User.create(username: "#{elements[3]}", password: "#{elements[4]}",dom_state: "#{elements[7]}")
   Profile.create(first_name: "#{elements[1]}", last_name: "#{elements[2]}", birthday: "#{elements[5]}", email: "#{elements[6]}", user_id: "#{elements[0]}")
 end
 

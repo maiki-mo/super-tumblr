@@ -9,6 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo|Prosto+One" rel="stylesheet">
   <title>Stumblr</title>
 </head>
+  <% if @user != nil %>
+    <span id="dom-state"><%="#{@user.dom_state}"%></span>
+  <% end %>
 <body onload="backCheck()">
   <header>
     <div id="inner">
@@ -57,6 +60,7 @@
     <h5 id="title-h5">The Astronomical Blog</h5>
   </section>
   <main>
+    </section>
     <section id="main-info">
   <%= yield %>
     </section>

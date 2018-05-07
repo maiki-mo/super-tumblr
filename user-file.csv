@@ -1,15 +1,15 @@
-id,first_name,last_name,username,password,birthday,email
-1,Nicolaus,Copernicus,Pernicu5,nico,1989-09-20,ncop@gmail.com
-2,Maria,Mitchell,Mitch_Maria,mari,1983-02-31,mmit@yahoo.com
-3,Miles,Kington,King_Miles,mile,1834-05-21,mking@hotstuff.net
-4,Werner,Von Braun,BraunToRun,wern,1732-05-03,vbw@me.com
-5,Stephen,Hawking,HumanCyborg,step,1834-05-21,Hawk.is.howling@computer.com
-6,Neil,deGrasse Tyson,Star_Talker,neil,2344-03-22,TysonAintChicken@gmail.com
-7,Carl,Sagan,Star_Toker,carl,1973-07-23,Billions.and.billions@gmail.com
-8,Arthur,C. Clarke,Android_Waifu,arth,1874-11-23,ArthurCDeezNuts@gmail.com
-9,Edwin,Hubble,AllSeeingEye,edwi,1909-09-30,hubblebubble@yahoo.com
-10,Plato,,PlayDough,plat,0000-00-00,plato.the.og@aol.com
-11,Johannes,Keppler,Keep,joha,1733-02-12,joa@gmail.com
-12,Neil,Armstrong,TheFirst,neil,1932-03-18,the.first@gmail.com
-13,Galileo,Galilie,the_heretic,gali,1680-11-31,galigal@yahoo.com
-14,Homer,,the_real_first,home,0000-00-00,first_author@aol.com
+id,first_name,last_name,username,password,birthday,email,dom_state
+1,Nicolaus,Copernicus,Pernicu5,nico,1989-09-20,ncop@gmail.com,night
+2,Maria,Mitchell,Mitch_Maria,mari,1983-02-31,mmit@yahoo.com,night
+3,Miles,Kington,King_Miles,mile,1834-05-21,mking@hotstuff.net,night
+4,Werner,Von Braun,BraunToRun,wern,1732-05-03,vbw@me.com,night
+5,Stephen,Hawking,HumanCyborg,step,1834-05-21,Hawk.is.howling@computer.com,night
+6,Neil,deGrasse Tyson,Star_Talker,neil,2344-03-22,TysonAintChicken@gmail.com,night
+7,Carl,Sagan,Star_Toker,carl,1973-07-23,Billions.and.billions@gmail.com,night
+8,Arthur,C. Clarke,Android_Waifu,arth,1874-11-23,ArthurCDeezNuts@gmail.com,night
+9,Edwin,Hubble,AllSeeingEye,edwi,1909-09-30,hubblebubble@yahoo.com,night
+10,Plato,,PlayDough,plat,0000-00-00,plato.the.og@aol.com,night
+11,Johannes,Keppler,Keep,joha,1733-02-12,joa@gmail.com,night
+12,Neil,Armstrong,TheFirst,neil,1932-03-18,the.first@gmail.com,night
+13,Galileo,Galilie,the_heretic,gali,1680-11-31,galigal@yahoo.com,night
+14,Homer,,the_real_first,home,0000-00-00,first_author@aol.com,night
