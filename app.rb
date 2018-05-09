@@ -92,25 +92,18 @@ end
 post "/log_in" do
   @user = User.find_by(username: params[:username])
 
-  # checks to see if the user exists
-  #   and also if the user password matches the password in the db
   if @user && @user.password == params[:password]
-    # this line signs a user in
     session[:user_id] = @user.id
+
+    flash[:info] = "You are now signed in"
 
     redirect "/"
   else
-    # if user does not exist or password does not match then
-    #   redirect the user to the sign in page
+    
+    flash[:info] = "Your password or username is incorrect"
+    
     redirect "/log_in"
   end
-end
-
-get "/sign-in" do
-  if session[:user_id] != nil
-    @user = User.find(session[:user_id])
-  end
-  erb :user_page
 end
 
 get "/log_out" do
