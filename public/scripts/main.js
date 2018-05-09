@@ -1,15 +1,15 @@
 let buttonDay = document.querySelector("#day");
 let buttonNight = document.querySelector("#night");
 var background = document.querySelector("body").style;
-var bgColor;
+var bgColor = document.querySelector("#dom-state").innerHTML;
 
-function backCheck() {
-  if (bgColor === "") {
-    changeDisplaDay();
+(function backCheck() {
+  if (bgColor === "day") {
+    changeDisplayDay();
   } else {
     changeDisplayNight();
   }
-}
+})();
 
 function changeDisplayNight() {
   document.querySelector("body").style.backgroundColor = "#221818";
@@ -28,10 +28,9 @@ function changeDisplayDay() {
   document.querySelector("body").style.backgroundColor = "white";
   nav = document.querySelectorAll(".sign-in-sign-out");
     for (elements in nav) {
-      nav[elements].style.backgroundColor = "lightgrey";
-      nav[elements].style.paddingLeft = "0.5vw";
-      nav[elements].style.paddingTop = "0.5vw";
-      nav[elements].style.border = "0";
+      nav[elements].style.backgroundColor = "white";
+      nav[elements].style.borderBottom = "1px #67768F solid";
+      nav[elements].style.borderRight = "1px #67768F solid";
   }
 }
 

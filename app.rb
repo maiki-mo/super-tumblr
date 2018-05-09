@@ -14,20 +14,40 @@ configure :production do
 end
 
 enable :sessions
+set :sessions, :expire_after => (60 * 4)
 
-# def changeState
-#   if User.find(session[:user_id]) != nil
-#     state = User.find(session[:user_id]).dom_state
-#   end
-# end
+get '/layout' do
+  @user = User.find(session[:user_id])
+end
+
+def changeNight
+  if User.find(session[:user_id]) != nil
+    @user = User.find(session[:user_id])
+    @user.update(dom_state: "night")
+    @user.save
+    p @user
+  end
+end
+
+def changeDay
+  if User.find(session[:user_id]) != nil
+    @user = User.find(session[:user_id])
+    @user.update(dom_state: "day")
+    @user.save
+    p @user
+  end
+end
 
 get '/' do
-  def changeState
-    if User.find(session[:user_id]) != nil
-      state = User.find(session[:user_id]).dom_state
-      user = User.find(session[:user_id])
-      return user.dom_state
-    end
+  # def changeState
+  #   if User.find(session[:user_id]) != nil
+  #     state = User.find(session[:user_id]).dom_state
+  #     @user = User.find(session[:user_id])
+  #     return @user.dom_state
+  #   end
+  # end
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
   end
   client = NasaApod::Client.new(api_key: ENV['NASA_API_KEY'])
   @result = client.search(date: Time.now.strftime("20%y-%m-%d"))
@@ -35,7 +55,16 @@ get '/' do
   erb :index
 end
 
+put '/' do
+  param = params[:dom_state]
+  User.find(session[:user_id]).update(dom_state: param)
+  redirect '/'
+end
+
 get '/post' do
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
+  end
   erb :post
 end
 
@@ -51,6 +80,9 @@ post '/post' do
 end
 
 get '/profile' do
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
+  end
   id = session[:user_id]
   @user_posts = User.find(id).posts.reverse
   erb :profile
@@ -73,6 +105,9 @@ end
 
 
 get '/log_in' do
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
+  end
   erb :log_in
 end
 
@@ -94,16 +129,24 @@ post "/log_in" do
 end
 
 get "/sign-in" do
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
+  end
   erb :user_page
 end
 
 get "/log_out" do
-  # this is the line that signs a user out
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
+  end
   session[:user_id] = nil
   redirect "/"
 end
 
 get "/sign_up" do
+  if session[:user_id] != nil
+    @user = User.find(session[:user_id])
+  end
   erb :sign_up
 end
 

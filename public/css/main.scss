@@ -41,6 +41,21 @@ header {
   z-index: 2;
 }
 
+.layout-buttons {
+  text-align: right;
+}
+
+#theme {
+  position: relative;
+  top: 0.25vw;
+  font-family: $titlefont;
+  font-size: 1.8vw;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 0.5vw;
+}
+
 #inner {
   position: relative;
   bottom: 11.5vw;
@@ -89,6 +104,16 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0.5vw 2vw 1.8vw 2.5vw;
   grid-row: 1;
+}
+
+#night {
+  margin-left: -1vw;
+  margin-right: -0.5vw;
+  color: white;
+}
+
+#day {
+  background-color: lightgrey;
 }
 
 #photo {
@@ -159,7 +184,7 @@ h1 {
 #mt-1 {
   position: relative;
   z-index: 3;
-  bottom: 1vw;
+  bottom: 2vw;
   left: 4.5vw;
   background-color: lightgrey;
   // background-color: black;
@@ -188,7 +213,7 @@ h1 {
   height: 19vw;
   position: relative;
   z-index: 2;
-  bottom: 27.5vw;
+  bottom: 28.5vw;
   left: 22vw;
   clip-path: polygon(50% 0%, 100% 10%, 50% 100%, 0% 10%);
 }
@@ -344,7 +369,7 @@ main {
 }
 
 .sign-in-sign-out:hover {
-  color: white;
+  color: lightgrey;
 }
 
 .content {

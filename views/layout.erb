@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo|Prosto+One" rel="stylesheet">
   <title>Stumblr</title>
 </head>
+<body onload="">
   <% if @user != nil %>
-    <span id="dom-state"><%="#{user.dom_state}"%></span>
+    <span id="dom-state"><%="#{@user.dom_state}"%></span>
   <% end %>
-<body onload="backCheck()">
   <header>
     <div id="inner">
     </div>
@@ -61,14 +61,21 @@
   </section>
   <main>
   <% if session[:user_id] %>
-    <section class="button-area">
-      <span id="theme">Theme:</span>
-      <button onclick"<% changeState %>" id="day">Day</button>
-      <button onclick"<% changeState %>" id="night">Night</button>
-    </section>
-  <% else %>
-    <section class="button-area"><section>
-  <%end%>
+  <section class="layout-buttons">
+    <span id="theme">Theme:</span>
+      <form style="display: inline;" class="button-area" action="/" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="dom_state" value="day">
+        <button id="day">Day</button>
+      </form>    
+      <form style="display: inline;" class="button-area" action="/" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="dom_state" value="night">
+        <button id="night">Night</button>
+      </form>
+    <% else %>
+    <%end%>
+  </section>
     <section id="main-info">
   <%= yield %>
     </section>

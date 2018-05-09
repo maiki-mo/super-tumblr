@@ -10,7 +10,7 @@ hr {
   padding-top: 2vw; }
 
 #dom-state {
-  visibility: hidden; }
+  opacity: 100; }
 
 body {
   margin: 0;
@@ -28,6 +28,19 @@ header {
   height: 0.1vw;
   background-color: #C6C8CD;
   z-index: 2; }
+
+.layout-buttons {
+  text-align: right; }
+
+#theme {
+  position: relative;
+  top: 0.25vw;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.8vw;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 0.5vw; }
 
 #inner {
   position: relative;
@@ -71,6 +84,14 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0.5vw 2vw 1.8vw 2.5vw;
   grid-row: 1; }
+
+#night {
+  margin-left: -1vw;
+  margin-right: -0.5vw;
+  color: white; }
+
+#day {
+  background-color: lightgrey; }
 
 #photo {
   grid-row: 3;
@@ -130,7 +151,7 @@ h1 {
 #mt-1 {
   position: relative;
   z-index: 3;
-  bottom: 1vw;
+  bottom: 2vw;
   left: 4.5vw;
   background-color: lightgrey;
   width: 21vw;
@@ -156,7 +177,7 @@ h1 {
   height: 19vw;
   position: relative;
   z-index: 2;
-  bottom: 27.5vw;
+  bottom: 28.5vw;
   left: 22vw;
   clip-path: polygon(50% 0%, 100% 10%, 50% 100%, 0% 10%); }
 
@@ -294,7 +315,7 @@ main {
   border-right: 1px #67768F solid; }
 
 .sign-in-sign-out:hover {
-  color: white; }
+  color: lightgrey; }
 
 .content {
   padding: 2vw;
