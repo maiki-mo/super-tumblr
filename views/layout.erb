@@ -55,7 +55,7 @@
     <div id="moon-2">
     </div>
   </div>
-  <section class="title-bar">
+  <section id="title" class="title-bar">
     <h1 id="title-text">Stumblr:</h1>
     <h5 id="title-h5">The Astronomical Blog</h5>
   </section>
@@ -86,11 +86,11 @@
   <footer>
     <% if session[:user_id] %>
       <a href="/log_out"><button class="foot-buttons">sign out</button></a>
-      <a href="#first"><button class="foot-buttons">back to top</button></a>
+      <a href="#title"><button class="foot-buttons">back to top</button></a>
     <% else %>
       <a href="/sign_up"><button class="foot-buttons">sign up</button></a>
       <a href="/log_in"><button class="foot-buttons">Sign in</button></a>
-      <a href="#first"><button class="foot-buttons">back to top</button></a>
+      <a href="#title"><button class="foot-buttons">back to top</button></a>
     <% end %>
   </footer>
   <script src="scripts/main.js"></script>
