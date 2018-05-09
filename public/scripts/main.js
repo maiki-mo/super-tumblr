@@ -1,15 +1,15 @@
 let buttonDay = document.querySelector("#day");
 let buttonNight = document.querySelector("#night");
 var background = document.querySelector("body").style;
-var bgColor;
+var bgColor = document.querySelector("#dom-state").innerHTML;
 
-function backCheck() {
-  if (bgColor === "") {
-    changeDisplaDay();
+(function backCheck() {
+  if (bgColor === "day") {
+    changeDisplayDay();
   } else {
     changeDisplayNight();
   }
-}
+})();
 
 function changeDisplayNight() {
   document.querySelector("body").style.backgroundColor = "#221818";
@@ -28,27 +28,20 @@ function changeDisplayDay() {
   document.querySelector("body").style.backgroundColor = "white";
   nav = document.querySelectorAll(".sign-in-sign-out");
     for (elements in nav) {
-      nav[elements].style.backgroundColor = "lightgrey";
-      nav[elements].style.paddingLeft = "0.5vw";
-      nav[elements].style.paddingTop = "0.5vw";
-      nav[elements].style.border = "0";
+      nav[elements].style.backgroundColor = "white";
+      nav[elements].style.borderBottom = "1px #67768F solid";
+      nav[elements].style.borderRight = "1px #67768F solid";
   }
 }
-
-// function hovColor(x) {
-//   x.style.color = "black";
-// }
-
-// function hovColorBack(x) {
-//   x.style.color = "#67768F";
-// }
 
 buttonDay.addEventListener("click", changeDisplayDay)
 buttonNight.addEventListener("click", changeDisplayNight)
 
-// document.getElementsByClassName(".sign-in-sign-out").addEventListener("mouseover", function() {
-//   if (document.querySelector("body").style.backgroundColor === "white") {
-//     alert("I'm a mouseover");
-//     document.querySelector(".sign-in-sign-out").style.color = "black";
-//   }
-// })
+let closeButton = document.querySelector(".close-button")
+let flashPanel = document.querySelector(".flash")
+
+closeButton.addEventListener("click", event => {
+  event.preventDefault()
+
+  flashPanel.classList.add("hide")
+})

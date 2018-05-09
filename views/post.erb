@@ -4,7 +4,6 @@
     <% if session[:user_id] %>
       <form action="/post" method="post">
         <input class="forms" type="text" name="title" id="post-title" placeholder="Title of Post"><br />
-        <input class="forms" type="text" name="subject" id="post-subject" placeholder="Subject of Post"><br />
         <input class="forms" type="text" name="content" id="post-content" placeholder="Content of Post"> <br />
         <input id="sign-button" type="submit" value="Launch!">
       </form>

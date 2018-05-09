@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo|Prosto+One" rel="stylesheet">
   <title>Stumblr</title>
 </head>
+<body>
   <% if @user != nil %>
     <span id="dom-state"><%="#{@user.dom_state}"%></span>
   <% end %>
-<body onload="backCheck()">
   <header>
     <div id="inner">
     </div>
@@ -55,12 +55,32 @@
     <div id="moon-2">
     </div>
   </div>
-  <section class="title-bar">
+  <section id="title" class="title-bar">
     <h1 id="title-text">Stumblr:</h1>
     <h5 id="title-h5">The Astronomical Blog</h5>
   </section>
   <main>
-    </section>
+  <% if session[:user_id] %>
+  <% flash.keys.each do |type| %>
+    <div id="flash" class="flash <%= type %>">
+      <%= flash[type] %>
+    </div>
+  <% end %>
+  <section class="layout-buttons">
+    <span id="theme">Theme:</span>
+      <form style="display: inline;" class="button-area" action="/" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="dom_state" value="day">
+        <button id="day">Day</button>
+      </form>    
+      <form style="display: inline;" class="button-area" action="/" method="post">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" name="dom_state" value="night">
+        <button id="night">Night</button>
+      </form>
+    <% else %>
+    <%end%>
+  </section>
     <section id="main-info">
   <%= yield %>
     </section>
@@ -71,11 +91,11 @@
   <footer>
     <% if session[:user_id] %>
       <a href="/log_out"><button class="foot-buttons">sign out</button></a>
-      <a href="#first"><button class="foot-buttons">back to top</button></a>
+      <a href="#title"><button class="foot-buttons">back to top</button></a>
     <% else %>
       <a href="/sign_up"><button class="foot-buttons">sign up</button></a>
       <a href="/log_in"><button class="foot-buttons">Sign in</button></a>
-      <a href="#first"><button class="foot-buttons">back to top</button></a>
+      <a href="#title"><button class="foot-buttons">back to top</button></a>
     <% end %>
   </footer>
   <script src="scripts/main.js"></script>

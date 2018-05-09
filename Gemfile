@@ -3,6 +3,7 @@ source 'https://rubygems.org'
   gem 'sinatra-contrib'
   gem "activerecord"
   gem "rake"
+  gem 'sinatra-flash'
   gem "sinatra-activerecord"
   gem 'nasa_apod'
 
