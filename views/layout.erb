@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo|Prosto+One" rel="stylesheet">
   <title>Stumblr</title>
 </head>
-<body onload="">
+<body>
   <% if @user != nil %>
     <span id="dom-state"><%="#{@user.dom_state}"%></span>
   <% end %>
@@ -61,6 +61,12 @@
   </section>
   <main>
   <% if session[:user_id] %>
+  <% flash.keys.each do |type| %>
+    <div id="flash" class="flash <%= type %>">
+      <%= flash[type] %>
+      <a class="close-button" href="#">x</a>
+    </div>
+  <% end %>
   <section class="layout-buttons">
     <span id="theme">Theme:</span>
       <form style="display: inline;" class="button-area" action="/" method="post">

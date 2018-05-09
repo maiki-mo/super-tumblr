@@ -34,20 +34,14 @@ function changeDisplayDay() {
   }
 }
 
-// function hovColor(x) {
-//   x.style.color = "black";
-// }
-
-// function hovColorBack(x) {
-//   x.style.color = "#67768F";
-// }
-
 buttonDay.addEventListener("click", changeDisplayDay)
 buttonNight.addEventListener("click", changeDisplayNight)
 
-// document.getElementsByClassName(".sign-in-sign-out").addEventListener("mouseover", function() {
-//   if (document.querySelector("body").style.backgroundColor === "white") {
-//     alert("I'm a mouseover");
-//     document.querySelector(".sign-in-sign-out").style.color = "black";
-//   }
-// })
+let closeButton = document.querySelector(".close-button")
+let flashPanel = document.querySelector(".flash")
+
+closeButton.addEventListener("click", event => {
+  event.preventDefault()
+
+  flashPanel.classList.add("hide")
+})

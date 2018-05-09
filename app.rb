@@ -1,6 +1,7 @@
 require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/reloader"
+require "sinatra/flash"
 require "./models"
 require 'nasa_apod'
 
@@ -16,36 +17,8 @@ end
 enable :sessions
 set :sessions, :expire_after => (60 * 4)
 
-get '/layout' do
-  @user = User.find(session[:user_id])
-end
-
-def changeNight
-  if User.find(session[:user_id]) != nil
-    @user = User.find(session[:user_id])
-    @user.update(dom_state: "night")
-    @user.save
-    p @user
-  end
-end
-
-def changeDay
-  if User.find(session[:user_id]) != nil
-    @user = User.find(session[:user_id])
-    @user.update(dom_state: "day")
-    @user.save
-    p @user
-  end
-end
 
 get '/' do
-  # def changeState
-  #   if User.find(session[:user_id]) != nil
-  #     state = User.find(session[:user_id]).dom_state
-  #     @user = User.find(session[:user_id])
-  #     return @user.dom_state
-  #   end
-  # end
   if session[:user_id] != nil
     @user = User.find(session[:user_id])
   end
@@ -57,7 +30,11 @@ end
 
 put '/' do
   param = params[:dom_state]
-  User.find(session[:user_id]).update(dom_state: param)
+  user = User.find(session[:user_id])
+  if param != user.dom_state
+    flash[:info] = "Theme Changed"
+  end
+  user.update(dom_state: param)
   redirect '/'
 end
 
