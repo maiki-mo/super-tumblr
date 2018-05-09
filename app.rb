@@ -35,7 +35,7 @@ put '/' do
     flash[:info] = "Theme Changed"
   end
   user.update(dom_state: param)
-  redirect '/'
+  redirect '/#title'
 end
 
 get '/post' do
@@ -53,6 +53,7 @@ post '/post' do
     user_id: session[:user_id],
     profile_id: session[:user_id]
   )
+  flash[:info] = "Post Added"
   redirect '/'
 end
 
@@ -143,6 +144,8 @@ post "/sign_up" do
 
   # this line does the signing in
   session[:user_id] = @user.id
+
+  flash[:info] = "Your account is now active"
 
   # assuming this page exists
   redirect "/"
